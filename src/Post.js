@@ -5,11 +5,15 @@ class Post {
     this.date = new Date();
   }
   toString() {
-    return JSON.stringify({
-      title: this.title,
-      img: this.img,
-      date: this.date.toJSON(),
-    });
+    return JSON.stringify(
+      {
+        title: this.title,
+        img: this.img,
+        date: this.date.toJSON(),
+      },
+      null,
+      2
+    );
   }
   get uppecaseTitle() {
     return this.title.toUpperCase();
